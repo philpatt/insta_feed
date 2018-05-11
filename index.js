@@ -6,7 +6,7 @@ app.set('view engine', 'ejs');
 
 
 app.get('/', function(req, res){
-    res.render('layout', {name: 'Sterling Archer'});
+    res.render('layout');
 });
 
 app.listen(3000);
