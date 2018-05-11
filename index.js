@@ -1,8 +1,12 @@
-var express = require ('express');
-var app = express();
+let express = require ('express');
+let path = require('path');
+let app = express();
+
+app.use(express.static(path.join(__dirname, 'views')));
+
 
 app.get('/', function(req, res){
-    res.send('hello world!');
+    res.sendFile('index.html');
 });
 
-app.listen(3000)
+app.listen(3000);
